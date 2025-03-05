@@ -36,3 +36,18 @@ function showhide() {
         toolbarbuttons.style.display = 'block';
     }
 }
+
+document.getElementById("start-game").addEventListener("click", function () {
+    alert("Game Started!");
+});
+
+document.getElementById('toggle-theme').addEventListener('click', function () {
+    var theme = document.getElementById('theme-style');
+    if (theme.getAttribute('href') === 'css/light.css') {
+        theme.setAttribute('href', 'css/dark.css');
+        this.innerText = "Switch to Light Mode";
+    } else {
+        theme.setAttribute('href', 'css/light.css');
+        this.innerText = "Switch to Dark Mode";
+    }
+});

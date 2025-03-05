@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-</head>
+    <link rel="stylesheet" href="css/style.css">
     <link id="style" rel="stylesheet" href="css/light.css">
-    <script src="js/scripts.js"></script>
+</head>
+
 <body>
-    <div id="toolbar">
-        <div id="buttons">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="#" onclick="switchmode()">Mode</a>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+        <div id="toolbar">
+            <div id="buttons">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="game/index.html">Play Game</a>
+                <a href="#" onclick="switchmode()">Mode</a>
+            </div>
+            <a href="#" onclick="showhide()">☰</a>
         </div>
-        <a href="#" onclick="showhide()">☰</a>
-    </div>
+        <button id="toggle-theme">Switch to Dark Mode</button>
+    </header>
+
+    <section class="main-content">
+        <h2>Hello! I'm Kane.</h2>
+        <p>Welcome to my personal website! This site showcases who I am and my interests.</p>
+        <img src="images/profile.jpg" alt="My Profile Picture">
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kane</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>

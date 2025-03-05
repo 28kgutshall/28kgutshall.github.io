@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>My RPG Game</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link id="style" rel="stylesheet" href="../css/light.css">
 </head>
-    <link id="style" rel="stylesheet" href="css/light.css">
-    <script src="js/scripts.js"></script>
+
 <body>
-    <div id="toolbar">
-        <div id="buttons">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="#" onclick="switchmode()">Mode</a>
+    <header>
+        <h1>Welcome to My RPG Game</h1>
+        <div id="toolbar">
+            <div id="buttons">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="index.html">Play Game</a>
+                <a href="#" onclick="switchmode()">Mode</a>
+            </div>
+            <a href="#" onclick="showhide()">☰</a>
         </div>
-        <a href="#" onclick="showhide()">☰</a>
-    </div>
+    </header>
+
+    <section class="game-content">
+        <h2>Game Instructions</h2>
+        <p>Click below to start the game! The game will open in the window below.</p>
+        <iframe src="index.html" width="100%" height="800px" frameborder="0"></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kane</p>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
 </body>
+
 </html>

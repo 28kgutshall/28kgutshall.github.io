@@ -9,6 +9,28 @@ a:hover {
     background-color: #FF00FF;
 }
 
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    background-color: #333;
+}
+
+footer {
+    background-color: #333;
+}
+
+button {
+    background-color: #444;
+    color: white;
+}
+
+button:hover {
+    background-color: #666;
+}
+
 #buttons {
     display: none;
 }
