@@ -5,6 +5,7 @@ a, a:visited {
     border-radius: 8px;
     text-decoration: none;
 }
+
 a:hover {
     background-color: #FF00FF;
 }
@@ -12,23 +13,37 @@ a:hover {
 body {
     background-color: #fff;
     color: #000;
+    font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: #333;
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
 }
 
 footer {
-    background-color: #333;
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #ddd;
 }
 
 button {
-    background-color: #444;
+    background-color: #4CAF50;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
-    background-color: #666;
+    background-color: #45a049;
 }
 
 #buttons {
@@ -37,4 +52,9 @@ button:hover {
 
 #toolbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ddd;
 }

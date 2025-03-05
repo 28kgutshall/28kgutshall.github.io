@@ -1,30 +1,24 @@
-// Change Variable
-let stylemode = document.cookie;
+let themeLink = document.getElementById('style');
 
-// Change Variable
-let stylelink = document.getElementById('style');
-
-// Conditional Branch with Else Branch
-if (stylemode == 'dark') {
-    // Change the href property of the 'link'
-    stylelink.href = 'css/dark.css';
+if (localStorage.getItem('theme') === 'dark') {
+    themeLink.setAttribute('href', 'css/dark.css');
+    document.getElementById('theme-toggle').textContent = "Switch to Light Mode";
 } else {
-    stylelink.href = 'css/light.css';
-    stylemode = 'light'
-    document.cookie = 'light';
+    themeLink.setAttribute('href', 'css/light.css');
+    document.getElementById('theme-toggle').textContent = "Switch to Dark Mode";
 }
 
-// Common Event
 function switchmode() {
-    //Conditional Statement with Else Branch
-    if (stylemode == 'light') {
-        stylemode = 'dark'
-        stylelink.href = 'css/dark.css';
-        document.cookie = 'dark';
+    let currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'light') {
+        localStorage.setItem('theme', 'dark');
+        themeLink.setAttribute('href', 'css/dark.css');
+        document.getElementById('theme-toggle').textContent = "Switch to Light Mode";
     } else {
-        stylemode = 'light'
-        stylelink.href = 'css/light.css';
-        document.cookie = 'light';
+        localStorage.setItem('theme', 'light');
+        themeLink.setAttribute('href', 'css/light.css');
+        document.getElementById('theme-toggle').textContent = "Switch to Dark Mode";
     }
 }
 
@@ -39,15 +33,4 @@ function showhide() {
 
 document.getElementById("start-game").addEventListener("click", function () {
     alert("Game Started!");
-});
-
-document.getElementById('toggle-theme').addEventListener('click', function () {
-    var theme = document.getElementById('theme-style');
-    if (theme.getAttribute('href') === 'css/light.css') {
-        theme.setAttribute('href', 'css/dark.css');
-        this.innerText = "Switch to Light Mode";
-    } else {
-        theme.setAttribute('href', 'css/light.css');
-        this.innerText = "Switch to Dark Mode";
-    }
 });
