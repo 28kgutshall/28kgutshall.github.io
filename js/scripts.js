@@ -1,24 +1,30 @@
-let themeLink = document.getElementById('style');
+// Change Variable
+let stylemode = document.cookie;
 
-if (localStorage.getItem('theme') === 'dark') {
-    themeLink.setAttribute('href', 'css/dark.css');
-    document.getElementById('theme-toggle').textContent = "Switch to Light Mode";
+// Change Variable
+let stylelink = document.getElementById('style');
+
+// Conditional Branch with Else Branch
+if (stylemode == 'dark') {
+    // Change the href property of the 'link'
+    stylelink.href = 'css/dark.css';
 } else {
-    themeLink.setAttribute('href', 'css/light.css');
-    document.getElementById('theme-toggle').textContent = "Switch to Dark Mode";
+    stylelink.href = 'css/light.css';
+    stylemode = 'light'
+    document.cookie = 'light';
 }
 
+// Common Event
 function switchmode() {
-    let currentTheme = localStorage.getItem('theme');
-
-    if (currentTheme === 'light') {
-        localStorage.setItem('theme', 'dark');
-        themeLink.setAttribute('href', 'css/dark.css');
-        document.getElementById('theme-toggle').textContent = "Switch to Light Mode";
+    //Conditional Statement with Else Branch
+    if (stylemode == 'light') {
+        stylemode = 'dark'
+        stylelink.href = 'css/dark.css';
+        document.cookie = 'dark';
     } else {
-        localStorage.setItem('theme', 'light');
-        themeLink.setAttribute('href', 'css/light.css');
-        document.getElementById('theme-toggle').textContent = "Switch to Dark Mode";
+        stylemode = 'light'
+        stylelink.href = 'css/light.css';
+        document.cookie = 'light';
     }
 }
 
@@ -30,7 +36,3 @@ function showhide() {
         toolbarbuttons.style.display = 'block';
     }
 }
-
-document.getElementById("start-game").addEventListener("click", function () {
-    alert("Game Started!");
-});

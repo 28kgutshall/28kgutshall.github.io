@@ -1,39 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My RPG Game</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link id="style" rel="stylesheet" href="../css/light.css">
+    <title>My Website</title>
 </head>
-
+    <link id="style" rel="stylesheet" href="css/light.css">
+    <script src="js/scripts.js"></script>
 <body>
-    <header>
-        <h1>Welcome to My RPG Game</h1>
-        <div id="toolbar">
-            <div id="buttons">
-                <a href="../index.html">Home</a>
-                <a href="../about.html">About</a>
-                <a href="index.html">Play Game</a>
-                <a href="#" onclick="switchmode()">Mode</a>
-            </div>
-            <a href="#" onclick="showhide()">☰</a>
+    <div id="toolbar">
+        <div id="buttons">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#" onclick="switchmode()">Mode</a>
         </div>
-    </header>
-
-    <section class="game-content">
-        <h2>Game Instructions</h2>
-        <p>Click the button below to start the game in a new window or tab.</p>
-        <button onclick="window.open('../game/www/index.html', '_blank')">Play Game</button>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Kane</p>
-    </footer>
-
-    <script src="../js/scripts.js"></script>
+        <a href="#" onclick="showhide()">☰</a>
+    </div>
 </body>
-
 </html>
