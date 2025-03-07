@@ -6,6 +6,7 @@ a, a:visited {
     border-radius: 8px;
     text-decoration: none;
 }
+
 a:hover {
     background-color: #ff00ff;
 }

@@ -1,33 +1,32 @@
 // Change Variable
 let stylemode = document.cookie;
 
-// Change Variable
+// Get the link to the stylesheet
 let stylelink = document.getElementById('style');
 
-// Conditional Branch with Else Branch
-if (stylemode == 'dark') {
-    // Change the href property of the 'link'
+// Conditional Branch for Dark or Light Mode
+if (stylemode === 'dark') {
     stylelink.href = 'css/dark.css';
 } else {
     stylelink.href = 'css/light.css';
-    stylemode = 'light'
-    document.cookie = 'light';
+    stylemode = 'light';
+    document.cookie = 'style=light';
 }
 
-// Common Event
+// Switch Mode Function
 function switchmode() {
-    //Conditional Statement with Else Branch
-    if (stylemode == 'light') {
-        stylemode = 'dark'
+    if (stylemode === 'light') {
+        stylemode = 'dark';
         stylelink.href = 'css/dark.css';
-        document.cookie = 'dark';
+        document.cookie = 'style=dark';
     } else {
-        stylemode = 'light'
+        stylemode = 'light';
         stylelink.href = 'css/light.css';
-        document.cookie = 'light';
+        document.cookie = 'style=light';
     }
 }
 
+// Show/Hide Toolbar Function
 function showhide() {
     let toolbarbuttons = document.getElementById('buttons');
     if (toolbarbuttons.style.display === 'block') {
