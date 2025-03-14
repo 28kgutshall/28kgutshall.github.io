@@ -1,32 +1,28 @@
-// Change Variable
-let stylemode = document.cookie;
-
-// Get the link to the stylesheet
+// Initialize stylemode from localStorage or default to light if not set
+let stylemode = localStorage.getItem('style') || 'light';
 let stylelink = document.getElementById('style');
 
-// Conditional Branch for Dark or Light Mode
+// Set the initial theme based on stylemode value
 if (stylemode === 'dark') {
     stylelink.href = 'css/dark.css';
 } else {
     stylelink.href = 'css/light.css';
-    stylemode = 'light';
-    document.cookie = 'style=light';
 }
 
-// Switch Mode Function
+// Function to toggle between light and dark mode
 function switchmode() {
     if (stylemode === 'light') {
         stylemode = 'dark';
         stylelink.href = 'css/dark.css';
-        document.cookie = 'style=dark';
+        localStorage.setItem('style', 'dark');
     } else {
         stylemode = 'light';
         stylelink.href = 'css/light.css';
-        document.cookie = 'style=light';
+        localStorage.setItem('style', 'light');
     }
 }
 
-// Show/Hide Toolbar Function
+// Function to toggle visibility of toolbar buttons
 function showhide() {
     let toolbarbuttons = document.getElementById('buttons');
     if (toolbarbuttons.style.display === 'block') {

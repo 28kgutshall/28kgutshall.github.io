@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Button</title>
     <link id="style" rel="stylesheet" href="css/light.css">
     <link id="style" rel="stylesheet" href="css/style.css">
+    <script src="js/scripts.js"></script>
+    <style>
+        #play {
+            transition-duration: 0.2s;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,13 +26,21 @@
         </div>
         <a href="#" onclick="showhide()">☰</a>
     </div>
-
-    <header>
-        <h1 name="header">Salutations! I'm Kane.</h1>
-        <img class="interest-img" src="img/profile.jpg" alt="Profile Picture">
-        <p>This site showcases my interests and who I am.</p>
-    </header>
-    <script src="js/scripts.js"></script>
+    <div id="score"><b>Score: 0</b></div>
+    <button id="play" onmouseover="move()">Click here to play!</button>
 </body>
+<script>
+    var playbutton = document.getElementById("play");
+
+    function move() {
+        let x = Math.random() * window.innerWidth;
+        let y = Math.random() * window.innerHeight;
+        playbutton.style.position = 'absolute';
+        playbutton.style.top = y + "px";
+        playbutton.style.left = x + "px";
+    }
+
+    move();
+</script>
 
 </html>
